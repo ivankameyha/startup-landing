@@ -11,6 +11,7 @@ const Contact = () => {
   //   setFormData({ name: '', email: '', message: '' });
   // };
 
+  // Enviar a Netlify
   const handleSubmit = (e) => {
   e.preventDefault();
   

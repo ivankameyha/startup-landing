@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import WhyChooseUs from './components/WhyChooseUs'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
+import Team from './components/Team'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Projects />
       <WhyChooseUs />
       <Testimonials />
+      <Team />
       <TechStack />
       <Contact />
       <Footer />

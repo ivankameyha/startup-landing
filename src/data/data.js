@@ -124,9 +124,7 @@ export const whyChooseUs = [
 ];
 
 export const socialLinks = [
-  { icon: "Instagram", href: "#" },
-  { icon: "Github", href: "#" },
-  { icon: "Linkedin", href: "#" }
+  { icon: "Instagram", href: "#" }
 ];
 
 export const navLinks = [

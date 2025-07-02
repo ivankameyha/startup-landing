@@ -1,14 +1,12 @@
 // src/components/Footer.jsx
 import React from 'react';
-import { Code, Instagram, Github, Linkedin } from 'lucide-react';
+import { Code, Instagram} from 'lucide-react';
 import { navLinks, socialLinks } from '../data/data.js';
 
 const Footer = () => {
   // Mapeo de iconos para las redes sociales
   const iconMap = {
-    Instagram: Instagram,
-    Github: Github,
-    Linkedin: Linkedin
+    Instagram: Instagram
   };
 
   return (

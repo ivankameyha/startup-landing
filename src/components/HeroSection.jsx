@@ -20,10 +20,10 @@ const HeroSection = () => {
             
             {/* Botones */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+              <button onClick={() => document.getElementById('proyectos')?.scrollIntoView({behavior: 'smooth'})} className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                 Ver proyectos <ArrowRight className="ml-2 w-5 h-5" />
               </button>
-              <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-medium hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
+              <button onClick={() => document.getElementById('contacto')?.scrollIntoView({behavior: 'smooth'})} className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-medium hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
                 Agendá una llamada
               </button>
             </div>

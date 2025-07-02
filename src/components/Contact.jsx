@@ -3,13 +3,29 @@ import React, { useState } from 'react';
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log('Form submitted:', formData);
+  //   // Aquí conectarías con tu backend
+  //   alert('¡Mensaje enviado! Te contactaremos pronto.');
+  //   setFormData({ name: '', email: '', message: '' });
+  // };
+
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Aquí conectarías con tu backend
-    alert('¡Mensaje enviado! Te contactaremos pronto.');
+  e.preventDefault();
+  
+  const form = e.target;
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(new FormData(form)).toString()
+  })
+  .then(() => {
+    alert('¡Mensaje enviado!');
     setFormData({ name: '', email: '', message: '' });
-  };
+  })
+  .catch(() => alert('Error al enviar'));
+};
 
   return (
     <section id="contacto" className="py-16 bg-gradient-to-br from-blue-600 to-purple-600">
@@ -20,7 +36,8 @@ const Contact = () => {
             Contanos tu idea y hagamos realidad tu próximo proyecto web
           </p>
           <div className="bg-white rounded-2xl p-8">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <input
                   type="text"

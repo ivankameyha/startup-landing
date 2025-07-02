@@ -31,7 +31,7 @@ const Header = () => {
         </nav>
 
         {/* Desktop CTA Button */}
-        <button className="hidden md:block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+        <button onClick={() => document.getElementById('contacto')?.scrollIntoView({behavior: 'smooth'})} className="hidden md:block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
           Solicitá tu web
         </button>
 
@@ -58,7 +58,7 @@ const Header = () => {
                 {link.text}
               </a>
             ))}
-            <button className="w-full mt-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-full">
+            <button onClick={() => document.getElementById('contacto')?.scrollIntoView({behavior: 'smooth'})} className="w-full mt-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-full">
               Solicitá tu web
             </button>
           </div>

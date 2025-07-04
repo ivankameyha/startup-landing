@@ -16,10 +16,16 @@ const Footer = () => {
           {/* Logo y descripción */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Code className="w-5 h-5 text-white" />
+              <div className="w-6 h-6 rounded-lg flex items-center justify-center">
+                <div 
+                  className="w-full h-full bg-gradient-to-r from-blue-600 to-purple-600"
+                  style={{
+                    WebkitMask: 'url(../../public/teamwork.svg) no-repeat center / contain',
+                    mask: 'url(../../public/teamwork.svg) no-repeat center / contain'
+                  }}
+                />
               </div>
-              <span className="text-xl font-bold">Mastiv Solutions</span>
+              <span className="text-xl font-bold">IMA Solutions</span>
             </div>
             <p className="text-gray-400">
               Transformamos ideas en experiencias web excepcionales.
@@ -64,7 +70,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>© Mastiv Solutions 2025. Todos los derechos reservados.</p>
+          <p>© IMSolutions 2025. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

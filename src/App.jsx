@@ -23,7 +23,7 @@ function App() {
       <TechStack />
       <Contact />
       <FloatingWhatsApp
-        phoneNumber="5491234567890" /* Falta agregar un numero */
+        phoneNumber="5493815450164" /* Falta agregar un numero */
         message="Hola, me interesa obtener más información sobre sus servicios"
         position="bottom-right"
         showTooltip={true}

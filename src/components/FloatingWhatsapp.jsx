@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const FloatingWhatsApp = ({ 
-  phoneNumber = "5491234567890", 
+  phoneNumber = "5493813423617", 
   message = "Hola, vengo desde tu página web",
   position = "bottom-right",
   showTooltip = true,

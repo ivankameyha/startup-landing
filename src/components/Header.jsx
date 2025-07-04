@@ -29,7 +29,7 @@ const Header = () => {
               }}
             />
           </div>
-          <span className="text-xl font-bold text-gray-800">IMSolutions</span>
+          <span className="text-xl font-bold text-gray-800">IMA Solutions</span>
         </div>
         
         {/* Desktop Navigation */}

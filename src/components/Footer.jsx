@@ -25,7 +25,7 @@ const Footer = () => {
                   }}
                 />
               </div>
-              <span className="text-xl font-bold">IMSolutions</span>
+              <span className="text-xl font-bold">IMA Solutions</span>
             </div>
             <p className="text-gray-400">
               Transformamos ideas en experiencias web excepcionales.

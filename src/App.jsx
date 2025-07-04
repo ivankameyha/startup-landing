@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import WhyChooseUs from './components/WhyChooseUs'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
+import FloatingWhatsApp from './components/FloatingWhatsapp'
 
 function App() {
   return (
@@ -19,6 +20,12 @@ function App() {
       <Testimonials />
       <TechStack />
       <Contact />
+      <FloatingWhatsApp
+        phoneNumber="5491234567890" /* Falta agregar un numero */
+        message="Hola, me interesa obtener más información sobre sus servicios"
+        position="bottom-right"
+        showTooltip={true}
+      />
       <Footer />
     </div>
   )

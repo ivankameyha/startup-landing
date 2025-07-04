@@ -21,7 +21,7 @@ const Footer = () => {
                   className="w-full h-full bg-gradient-to-r from-blue-600 to-purple-600"
                   style={{
                     WebkitMask: 'url(../../public/teamwork.svg) no-repeat center / contain',
-                    mask: 'url(../../public/teamwork.svg) no-repeat center / contain'
+                    mask: 'url(/teamwork.svg) no-repeat center / contain'
                   }}
                 />
               </div>

@@ -3,30 +3,21 @@ import React, { useState } from 'react';
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log('Form submitted:', formData);
-  //   // Aquí conectarías con tu backend
-  //   alert('¡Mensaje enviado! Te contactaremos pronto.');
-  //   setFormData({ name: '', email: '', message: '' });
-  // };
-
-  // Enviar a Netlify
   const handleSubmit = (e) => {
-  e.preventDefault();
-  
-  const form = e.target;
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(new FormData(form)).toString()
-  })
-  .then(() => {
-    alert('¡Mensaje enviado!');
-    setFormData({ name: '', email: '', message: '' });
-  })
-  .catch(() => alert('Error al enviar'));
-};
+    e.preventDefault();
+    
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(() => {
+      alert('¡Mensaje enviado!');
+      setFormData({ name: '', email: '', message: '' });
+    })
+    .catch(() => alert('Error al enviar'));
+  };
 
   return (
     <section id="contacto" className="py-16 bg-gradient-to-br from-blue-600 to-purple-600">
@@ -37,11 +28,20 @@ const Contact = () => {
             Contanos tu idea y hagamos realidad tu próximo proyecto web
           </p>
           <div className="bg-white rounded-2xl p-8">
-            <form onSubmit={handleSubmit} data-netlify="true">
+            <form 
+              name="contact" 
+              method="POST" 
+              data-netlify="true" 
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+            >
               <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
+              
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <input
                   type="text"
+                  name="name"
                   placeholder="Tu nombre"
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -50,6 +50,7 @@ const Contact = () => {
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Tu email"
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -58,6 +59,7 @@ const Contact = () => {
                 />
               </div>
               <textarea
+                name="message"
                 placeholder="Contanos sobre tu proyecto..."
                 value={formData.message}
                 onChange={(e) => setFormData({...formData, message: e.target.value})}
